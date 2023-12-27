@@ -1,0 +1,449 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 32744 bytes for ChunkPool::allocate
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (allocation.cpp:273), pid=62924, tid=67588
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_51-b16) (build 1.8.0_51-b16)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.51-b03 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000000001973b000):  JavaThread "C1 CompilerThread3" daemon [_thread_in_native, id=67588, stack(0x000000001a000000,0x000000001a100000)]
+
+Stack: [0x000000001a000000,0x000000001a100000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x32b4ca]
+
+
+Current CompileTask:
+C1:  10739 1666       3       sun.nio.cs.SingleByte$Encoder::encodeArrayLoop (236 bytes)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x0000000019997000 JavaThread "Timer-182" [_thread_blocked, id=57828, stack(0x000000002f190000,0x000000002f290000)]
+  0x0000000019995800 JavaThread "Timer-180" [_thread_blocked, id=44140, stack(0x000000002f090000,0x000000002f190000)]
+  0x0000000019996800 JavaThread "Timer-179" [_thread_blocked, id=5868, stack(0x000000002ef90000,0x000000002f090000)]
+  0x0000000019995000 JavaThread "Timer-178" [_thread_blocked, id=41332, stack(0x000000002ee90000,0x000000002ef90000)]
+  0x0000000019998800 JavaThread "Timer-177" [_thread_blocked, id=39752, stack(0x000000002ed90000,0x000000002ee90000)]
+  0x0000000019992000 JavaThread "Timer-176" [_thread_blocked, id=74144, stack(0x000000002ec90000,0x000000002ed90000)]
+  0x000000001998d800 JavaThread "Timer-175" [_thread_blocked, id=6276, stack(0x000000002eb90000,0x000000002ec90000)]
+  0x0000000019991000 JavaThread "Timer-174" [_thread_blocked, id=54392, stack(0x000000002ea90000,0x000000002eb90000)]
+  0x0000000019994000 JavaThread "Timer-173" [_thread_blocked, id=9292, stack(0x000000002e990000,0x000000002ea90000)]
+  0x000000001998f000 JavaThread "Timer-172" [_thread_blocked, id=51068, stack(0x000000002e890000,0x000000002e990000)]
+  0x0000000019993800 JavaThread "Timer-171" [_thread_blocked, id=23236, stack(0x000000002e790000,0x000000002e890000)]
+  0x0000000019990800 JavaThread "Timer-170" [_thread_blocked, id=54176, stack(0x000000002e690000,0x000000002e790000)]
+  0x000000001998f800 JavaThread "Timer-169" [_thread_blocked, id=45012, stack(0x000000002e590000,0x000000002e690000)]
+  0x000000001998c800 JavaThread "Timer-168" [_thread_blocked, id=72232, stack(0x000000002e490000,0x000000002e590000)]
+  0x0000000019992800 JavaThread "Timer-167" [_thread_blocked, id=29428, stack(0x000000002e390000,0x000000002e490000)]
+  0x000000001998a800 JavaThread "Timer-166" [_thread_blocked, id=33664, stack(0x000000002e290000,0x000000002e390000)]
+  0x000000001998c000 JavaThread "Timer-165" [_thread_blocked, id=48200, stack(0x000000002e190000,0x000000002e290000)]
+  0x000000001998e000 JavaThread "Timer-164" [_thread_blocked, id=51848, stack(0x000000002e090000,0x000000002e190000)]
+  0x000000001998b000 JavaThread "Timer-163" [_thread_blocked, id=4236, stack(0x000000002df90000,0x000000002e090000)]
+  0x0000000019960000 JavaThread "Timer-162" [_thread_blocked, id=18980, stack(0x000000002de90000,0x000000002df90000)]
+  0x0000000019961800 JavaThread "Timer-161" [_thread_blocked, id=43900, stack(0x000000002dd90000,0x000000002de90000)]
+  0x000000001995d000 JavaThread "Timer-160" [_thread_blocked, id=55512, stack(0x000000002dc90000,0x000000002dd90000)]
+  0x000000001995f000 JavaThread "Timer-159" [_thread_blocked, id=12728, stack(0x000000002db90000,0x000000002dc90000)]
+  0x0000000019960800 JavaThread "Timer-158" [_thread_blocked, id=66432, stack(0x000000002da90000,0x000000002db90000)]
+  0x000000001995e800 JavaThread "Timer-157" [_thread_blocked, id=49356, stack(0x000000002d990000,0x000000002da90000)]
+  0x000000001995d800 JavaThread "Timer-156" [_thread_blocked, id=15876, stack(0x000000002d890000,0x000000002d990000)]
+  0x0000000019955800 JavaThread "Timer-155" [_thread_blocked, id=61468, stack(0x000000002d790000,0x000000002d890000)]
+  0x000000001995c000 JavaThread "Timer-154" [_thread_blocked, id=25580, stack(0x000000002d690000,0x000000002d790000)]
+  0x0000000019957800 JavaThread "Timer-153" [_thread_blocked, id=74904, stack(0x000000002d590000,0x000000002d690000)]
+  0x000000001995b800 JavaThread "Timer-152" [_thread_blocked, id=53316, stack(0x000000002d490000,0x000000002d590000)]
+  0x000000001995a000 JavaThread "Timer-151" [_thread_blocked, id=25784, stack(0x000000002d390000,0x000000002d490000)]
+  0x000000001995a800 JavaThread "Timer-150" [_thread_blocked, id=15780, stack(0x000000002d290000,0x000000002d390000)]
+  0x0000000019953000 JavaThread "Timer-149" [_thread_blocked, id=17916, stack(0x000000002d190000,0x000000002d290000)]
+  0x0000000019957000 JavaThread "Timer-148" [_thread_blocked, id=48768, stack(0x000000002d090000,0x000000002d190000)]
+  0x0000000019954800 JavaThread "Timer-147" [_thread_blocked, id=74036, stack(0x000000002cf90000,0x000000002d090000)]
+  0x0000000019952800 JavaThread "Timer-146" [_thread_blocked, id=57588, stack(0x000000002ce90000,0x000000002cf90000)]
+  0x0000000019956000 JavaThread "Timer-145" [_thread_blocked, id=67636, stack(0x000000002cd90000,0x000000002ce90000)]
+  0x0000000019959000 JavaThread "Timer-144" [_thread_blocked, id=760, stack(0x000000002cc90000,0x000000002cd90000)]
+  0x0000000019954000 JavaThread "Timer-143" [_thread_blocked, id=12572, stack(0x000000002cb90000,0x000000002cc90000)]
+  0x0000000019958800 JavaThread "Timer-142" [_thread_blocked, id=15900, stack(0x000000002ca90000,0x000000002cb90000)]
+  0x000000001a8d9800 JavaThread "Timer-141" [_thread_blocked, id=18756, stack(0x000000002c990000,0x000000002ca90000)]
+  0x000000001a8d8000 JavaThread "Timer-140" [_thread_blocked, id=41336, stack(0x000000002c890000,0x000000002c990000)]
+  0x000000001a8d7000 JavaThread "Timer-139" [_thread_blocked, id=26204, stack(0x000000002c790000,0x000000002c890000)]
+  0x000000001a8d6800 JavaThread "Timer-138" [_thread_blocked, id=56820, stack(0x000000002c690000,0x000000002c790000)]
+  0x000000001a8d8800 JavaThread "Timer-137" [_thread_blocked, id=59616, stack(0x000000002c590000,0x000000002c690000)]
+  0x000000001a8d5000 JavaThread "Timer-136" [_thread_blocked, id=19964, stack(0x000000002c490000,0x000000002c590000)]
+  0x000000001a8d5800 JavaThread "Timer-135" [_thread_blocked, id=39300, stack(0x000000002c390000,0x000000002c490000)]
+  0x000000001a8cd800 JavaThread "Timer-134" [_thread_blocked, id=12580, stack(0x000000002c290000,0x000000002c390000)]
+  0x000000001a8d4000 JavaThread "Timer-133" [_thread_blocked, id=7080, stack(0x000000002c190000,0x000000002c290000)]
+  0x000000001a8cc800 JavaThread "Timer-132" [_thread_blocked, id=58512, stack(0x000000002c090000,0x000000002c190000)]
+  0x000000001a8d3800 JavaThread "Timer-131" [_thread_blocked, id=56364, stack(0x000000002bf90000,0x000000002c090000)]
+  0x000000001a8cb800 JavaThread "Timer-130" [_thread_blocked, id=52260, stack(0x000000002be90000,0x000000002bf90000)]
+  0x000000001a8d2800 JavaThread "Timer-129" [_thread_blocked, id=18832, stack(0x000000002bd90000,0x000000002be90000)]
+  0x000000001a8cf800 JavaThread "Timer-128" [_thread_blocked, id=64176, stack(0x000000002bc90000,0x000000002bd90000)]
+  0x000000001a8d2000 JavaThread "Timer-127" [_thread_blocked, id=10612, stack(0x000000002bb90000,0x000000002bc90000)]
+  0x000000001a8ca000 JavaThread "Timer-126" [_thread_blocked, id=6420, stack(0x000000002ba90000,0x000000002bb90000)]
+  0x000000001a8ce000 JavaThread "Timer-125" [_thread_blocked, id=61776, stack(0x000000002b990000,0x000000002ba90000)]
+  0x000000001a8d1000 JavaThread "Timer-124" [_thread_blocked, id=59516, stack(0x000000002b890000,0x000000002b990000)]
+  0x000000001a8cf000 JavaThread "Timer-123" [_thread_blocked, id=50420, stack(0x000000002b790000,0x000000002b890000)]
+  0x000000001a8d0800 JavaThread "Timer-122" [_thread_blocked, id=15788, stack(0x000000002b690000,0x000000002b790000)]
+  0x000000001a8cb000 JavaThread "Timer-121" [_thread_blocked, id=13252, stack(0x000000002b590000,0x000000002b690000)]
+  0x000000001a88e000 JavaThread "Timer-120" [_thread_blocked, id=12376, stack(0x000000002b490000,0x000000002b590000)]
+  0x000000001a88d000 JavaThread "Timer-119" [_thread_blocked, id=27316, stack(0x000000002b390000,0x000000002b490000)]
+  0x000000001a88b000 JavaThread "Timer-118" [_thread_blocked, id=34760, stack(0x000000002b290000,0x000000002b390000)]
+  0x000000001a88c800 JavaThread "Timer-117" [_thread_blocked, id=41688, stack(0x000000002b190000,0x000000002b290000)]
+  0x000000001a88b800 JavaThread "Timer-116" [_thread_blocked, id=55820, stack(0x000000002b090000,0x000000002b190000)]
+  0x000000001a88a000 JavaThread "Timer-115" [_thread_blocked, id=55424, stack(0x000000002af90000,0x000000002b090000)]
+  0x000000001a889000 JavaThread "Timer-114" [_thread_blocked, id=16892, stack(0x000000002ae90000,0x000000002af90000)]
+  0x000000001a881800 JavaThread "Timer-113" [_thread_blocked, id=65636, stack(0x000000002ad90000,0x000000002ae90000)]
+  0x000000001a888800 JavaThread "Timer-112" [_thread_blocked, id=21688, stack(0x000000002ac90000,0x000000002ad90000)]
+  0x000000001a882800 JavaThread "Timer-111" [_thread_blocked, id=11004, stack(0x000000002ab90000,0x000000002ac90000)]
+  0x000000001a881000 JavaThread "Timer-110" [_thread_blocked, id=25576, stack(0x000000002aa90000,0x000000002ab90000)]
+  0x000000001a887000 JavaThread "Timer-109" [_thread_blocked, id=61708, stack(0x000000002a990000,0x000000002aa90000)]
+  0x000000001a887800 JavaThread "Timer-108" [_thread_blocked, id=64652, stack(0x000000002a890000,0x000000002a990000)]
+  0x000000001a87f800 JavaThread "Timer-107" [_thread_blocked, id=43248, stack(0x000000002a790000,0x000000002a890000)]
+  0x000000001a886000 JavaThread "Timer-106" [_thread_blocked, id=21388, stack(0x000000002a690000,0x000000002a790000)]
+  0x000000001a87e800 JavaThread "Timer-105" [_thread_blocked, id=19476, stack(0x000000002a590000,0x000000002a690000)]
+  0x000000001a885800 JavaThread "Timer-104" [_thread_blocked, id=19588, stack(0x000000002a490000,0x000000002a590000)]
+  0x000000001a883000 JavaThread "Timer-103" [_thread_blocked, id=13140, stack(0x000000002a390000,0x000000002a490000)]
+  0x000000001a880000 JavaThread "Timer-102" [_thread_blocked, id=53784, stack(0x000000002a290000,0x000000002a390000)]
+  0x000000001a884800 JavaThread "Timer-101" [_thread_blocked, id=24940, stack(0x000000002a190000,0x000000002a290000)]
+  0x000000001a884000 JavaThread "Timer-100" [_thread_blocked, id=51004, stack(0x000000002a090000,0x000000002a190000)]
+  0x000000001a76f800 JavaThread "Timer-99" [_thread_blocked, id=44780, stack(0x0000000029f90000,0x000000002a090000)]
+  0x000000001a76e800 JavaThread "Timer-98" [_thread_blocked, id=17284, stack(0x0000000029e90000,0x0000000029f90000)]
+  0x000000001a76e000 JavaThread "Timer-97" [_thread_blocked, id=20816, stack(0x0000000029d90000,0x0000000029e90000)]
+  0x000000001a76d000 JavaThread "Timer-96" [_thread_blocked, id=2132, stack(0x0000000029c90000,0x0000000029d90000)]
+  0x000000001a76c800 JavaThread "Timer-95" [_thread_blocked, id=41432, stack(0x0000000029b90000,0x0000000029c90000)]
+  0x000000001a765000 JavaThread "Timer-94" [_thread_blocked, id=54324, stack(0x0000000029a90000,0x0000000029b90000)]
+  0x000000001a76b800 JavaThread "Timer-93" [_thread_blocked, id=20020, stack(0x0000000029990000,0x0000000029a90000)]
+  0x000000001a76b000 JavaThread "Timer-92" [_thread_blocked, id=21728, stack(0x0000000029890000,0x0000000029990000)]
+  0x000000001a763800 JavaThread "Timer-91" [_thread_blocked, id=39632, stack(0x0000000029790000,0x0000000029890000)]
+  0x000000001a76a000 JavaThread "Timer-90" [_thread_blocked, id=25892, stack(0x0000000029690000,0x0000000029790000)]
+  0x000000001a762800 JavaThread "Timer-89" [_thread_blocked, id=39040, stack(0x0000000029590000,0x0000000029690000)]
+  0x000000001a768800 JavaThread "Timer-88" [_thread_blocked, id=27540, stack(0x0000000029490000,0x0000000029590000)]
+  0x000000001a764000 JavaThread "Timer-87" [_thread_blocked, id=15868, stack(0x0000000029390000,0x0000000029490000)]
+  0x000000001a769800 JavaThread "Timer-86" [_thread_blocked, id=18500, stack(0x0000000029290000,0x0000000029390000)]
+  0x000000001a761000 JavaThread "Timer-85" [_thread_blocked, id=50880, stack(0x0000000029190000,0x0000000029290000)]
+  0x000000001a767000 JavaThread "Timer-84" [_thread_blocked, id=67116, stack(0x0000000029090000,0x0000000029190000)]
+  0x000000001a768000 JavaThread "Timer-83" [_thread_blocked, id=68184, stack(0x0000000028f90000,0x0000000029090000)]
+  0x000000001a762000 JavaThread "Timer-82" [_thread_blocked, id=70968, stack(0x0000000028e90000,0x0000000028f90000)]
+  0x000000001a760800 JavaThread "Timer-81" [_thread_blocked, id=34796, stack(0x0000000028d90000,0x0000000028e90000)]
+  0x000000001a765800 JavaThread "Timer-80" [_thread_blocked, id=8424, stack(0x0000000028c90000,0x0000000028d90000)]
+  0x000000001a766800 JavaThread "Timer-79" [_thread_blocked, id=18548, stack(0x0000000028b90000,0x0000000028c90000)]
+  0x000000001a725000 JavaThread "Timer-78" [_thread_blocked, id=13468, stack(0x0000000028a90000,0x0000000028b90000)]
+  0x000000001a724000 JavaThread "Timer-77" [_thread_blocked, id=5984, stack(0x0000000028990000,0x0000000028a90000)]
+  0x000000001a72b000 JavaThread "Timer-76" [_thread_blocked, id=19852, stack(0x0000000028890000,0x0000000028990000)]
+  0x000000001a72a000 JavaThread "Timer-75" [_thread_blocked, id=33252, stack(0x0000000028790000,0x0000000028890000)]
+  0x000000001a729800 JavaThread "Timer-74" [_thread_blocked, id=20856, stack(0x0000000028690000,0x0000000028790000)]
+  0x000000001a728000 JavaThread "Timer-73" [_thread_blocked, id=51720, stack(0x0000000028590000,0x0000000028690000)]
+  0x000000001a726800 JavaThread "Timer-72" [_thread_blocked, id=11196, stack(0x0000000028490000,0x0000000028590000)]
+  0x000000001a723800 JavaThread "Timer-71" [_thread_blocked, id=19628, stack(0x0000000028390000,0x0000000028490000)]
+  0x000000001a725800 JavaThread "Timer-70" [_thread_blocked, id=34540, stack(0x0000000028290000,0x0000000028390000)]
+  0x000000001a728800 JavaThread "Timer-69" [_thread_blocked, id=64952, stack(0x0000000028190000,0x0000000028290000)]
+  0x000000001a727000 JavaThread "Timer-68" [_thread_blocked, id=25896, stack(0x0000000028090000,0x0000000028190000)]
+  0x000000001a71b800 JavaThread "Timer-67" [_thread_blocked, id=71260, stack(0x0000000027f90000,0x0000000028090000)]
+  0x000000001a721000 JavaThread "Timer-66" [_thread_blocked, id=50256, stack(0x0000000027e90000,0x0000000027f90000)]
+  0x000000001a720800 JavaThread "Timer-65" [_thread_blocked, id=67096, stack(0x0000000027d90000,0x0000000027e90000)]
+  0x000000001a71f000 JavaThread "Timer-64" [_thread_blocked, id=64704, stack(0x0000000027c90000,0x0000000027d90000)]
+  0x000000001a71d000 JavaThread "Timer-63" [_thread_blocked, id=55236, stack(0x0000000027b90000,0x0000000027c90000)]
+  0x000000001a722800 JavaThread "Timer-62" [_thread_blocked, id=40484, stack(0x0000000027a90000,0x0000000027b90000)]
+  0x000000001a71e000 JavaThread "Timer-61" [_thread_blocked, id=38292, stack(0x0000000027990000,0x0000000027a90000)]
+  0x000000001a71f800 JavaThread "Timer-60" [_thread_blocked, id=7452, stack(0x0000000027890000,0x0000000027990000)]
+  0x000000001a722000 JavaThread "Timer-59" [_thread_blocked, id=49372, stack(0x0000000027790000,0x0000000027890000)]
+  0x000000001a71c800 JavaThread "Timer-58" [_thread_blocked, id=9164, stack(0x0000000027690000,0x0000000027790000)]
+  0x000000001a6f9000 JavaThread "Timer-57" [_thread_blocked, id=7824, stack(0x0000000027590000,0x0000000027690000)]
+  0x000000001a6f7800 JavaThread "Timer-56" [_thread_blocked, id=25640, stack(0x0000000027490000,0x0000000027590000)]
+  0x000000001a6fa800 JavaThread "Timer-55" [_thread_blocked, id=37440, stack(0x0000000027390000,0x0000000027490000)]
+  0x000000001a6f9800 JavaThread "Timer-54" [_thread_blocked, id=25504, stack(0x0000000027290000,0x0000000027390000)]
+  0x000000001a6f8000 JavaThread "Timer-53" [_thread_blocked, id=14916, stack(0x0000000027190000,0x0000000027290000)]
+  0x000000001a6f6800 JavaThread "Timer-52" [_thread_blocked, id=49156, stack(0x0000000027090000,0x0000000027190000)]
+  0x000000001a6f6000 JavaThread "Timer-51" [_thread_blocked, id=6544, stack(0x0000000026f90000,0x0000000027090000)]
+  0x000000001a6ee000 JavaThread "Timer-50" [_thread_blocked, id=75728, stack(0x0000000026e90000,0x0000000026f90000)]
+  0x000000001a6f5000 JavaThread "Timer-49" [_thread_blocked, id=23652, stack(0x0000000026590000,0x0000000026690000)]
+  0x000000001a6f4800 JavaThread "Timer-48" [_thread_blocked, id=73256, stack(0x0000000026490000,0x0000000026590000)]
+  0x000000001a6ec800 JavaThread "Timer-47" [_thread_blocked, id=10256, stack(0x0000000026390000,0x0000000026490000)]
+  0x000000001a6f3800 JavaThread "Timer-46" [_thread_blocked, id=46072, stack(0x0000000026290000,0x0000000026390000)]
+  0x000000001a6ec000 JavaThread "Timer-45" [_thread_blocked, id=11164, stack(0x0000000026190000,0x0000000026290000)]
+  0x000000001a6f2800 JavaThread "Timer-44" [_thread_blocked, id=17720, stack(0x0000000026090000,0x0000000026190000)]
+  0x000000001a6ed800 JavaThread "Timer-43" [_thread_blocked, id=14396, stack(0x0000000025f90000,0x0000000026090000)]
+  0x000000001a6eb000 JavaThread "Timer-42" [_thread_blocked, id=13928, stack(0x0000000025e90000,0x0000000025f90000)]
+  0x000000001a6f2000 JavaThread "Timer-41" [_thread_blocked, id=11140, stack(0x0000000025d90000,0x0000000025e90000)]
+  0x000000001a6ef800 JavaThread "Timer-40" [_thread_blocked, id=11064, stack(0x0000000025c90000,0x0000000025d90000)]
+  0x000000001a6f0800 JavaThread "Timer-39" [_thread_blocked, id=73420, stack(0x0000000025b90000,0x0000000025c90000)]
+  0x000000001a6ef000 JavaThread "Timer-38" [_thread_blocked, id=50224, stack(0x0000000025a90000,0x0000000025b90000)]
+  0x000000001a6f1000 JavaThread "Timer-37" [_thread_blocked, id=10532, stack(0x0000000025990000,0x0000000025a90000)]
+  0x00000000199a8000 JavaThread "Timer-36" [_thread_blocked, id=46548, stack(0x0000000025890000,0x0000000025990000)]
+  0x00000000199a5000 JavaThread "Timer-35" [_thread_blocked, id=43344, stack(0x0000000025790000,0x0000000025890000)]
+  0x00000000199a4000 JavaThread "Timer-34" [_thread_blocked, id=51928, stack(0x0000000025690000,0x0000000025790000)]
+  0x00000000199a7000 JavaThread "Timer-33" [_thread_blocked, id=4880, stack(0x0000000025590000,0x0000000025690000)]
+  0x00000000199a3800 JavaThread "Timer-32" [_thread_blocked, id=42916, stack(0x0000000025490000,0x0000000025590000)]
+  0x00000000199a6800 JavaThread "Timer-31" [_thread_blocked, id=65680, stack(0x0000000025390000,0x0000000025490000)]
+  0x00000000199a8800 JavaThread "Timer-30" [_thread_blocked, id=67504, stack(0x0000000025290000,0x0000000025390000)]
+  0x00000000199a9800 JavaThread "Timer-29" [_thread_blocked, id=58088, stack(0x0000000025190000,0x0000000025290000)]
+  0x000000001999f000 JavaThread "Timer-28" [_thread_blocked, id=14608, stack(0x0000000025090000,0x0000000025190000)]
+  0x00000000199a2800 JavaThread "Timer-27" [_thread_blocked, id=55592, stack(0x0000000024f90000,0x0000000025090000)]
+  0x00000000199a5800 JavaThread "Timer-26" [_thread_blocked, id=17328, stack(0x0000000024e90000,0x0000000024f90000)]
+  0x000000001999b000 JavaThread "Timer-25" [_thread_blocked, id=71456, stack(0x0000000024d90000,0x0000000024e90000)]
+  0x000000001999c000 JavaThread "Timer-24" [_thread_blocked, id=17068, stack(0x0000000024c90000,0x0000000024d90000)]
+  0x00000000199a2000 JavaThread "Timer-23" [_thread_blocked, id=64400, stack(0x0000000024b90000,0x0000000024c90000)]
+  0x000000001999e000 JavaThread "Timer-22" [_thread_blocked, id=52844, stack(0x0000000024a90000,0x0000000024b90000)]
+  0x000000001999a800 JavaThread "Timer-21" [_thread_blocked, id=66740, stack(0x0000000024990000,0x0000000024a90000)]
+  0x000000001999c800 JavaThread "Timer-20" [_thread_blocked, id=63352, stack(0x0000000024890000,0x0000000024990000)]
+  0x000000001999d800 JavaThread "Timer-19" [_thread_blocked, id=54748, stack(0x0000000024790000,0x0000000024890000)]
+  0x000000001999f800 JavaThread "Timer-18" [_thread_blocked, id=10328, stack(0x0000000024690000,0x0000000024790000)]
+  0x00000000199a0800 JavaThread "Timer-17" [_thread_blocked, id=39692, stack(0x0000000024590000,0x0000000024690000)]
+  0x00000000199a1000 JavaThread "Timer-16" [_thread_blocked, id=8876, stack(0x0000000024490000,0x0000000024590000)]
+  0x000000001a6d3800 JavaThread "Timer-15" [_thread_blocked, id=56696, stack(0x0000000024390000,0x0000000024490000)]
+  0x000000001a6d8000 JavaThread "Timer-14" [_thread_blocked, id=14116, stack(0x0000000024290000,0x0000000024390000)]
+  0x000000001a6d7000 JavaThread "Timer-13" [_thread_blocked, id=66500, stack(0x0000000024190000,0x0000000024290000)]
+  0x000000001a6d5000 JavaThread "Timer-12" [_thread_blocked, id=17392, stack(0x0000000024090000,0x0000000024190000)]
+  0x000000001a6d6800 JavaThread "Timer-11" [_thread_blocked, id=71184, stack(0x0000000023f90000,0x0000000024090000)]
+  0x000000001a6d2000 JavaThread "Timer-10" [_thread_blocked, id=46824, stack(0x0000000023e90000,0x0000000023f90000)]
+  0x000000001a6d2800 JavaThread "Timer-9" [_thread_blocked, id=62704, stack(0x0000000023d90000,0x0000000023e90000)]
+  0x000000001a6d5800 JavaThread "Timer-8" [_thread_blocked, id=25184, stack(0x0000000023c90000,0x0000000023d90000)]
+  0x000000001a6d1000 JavaThread "Timer-7" [_thread_blocked, id=41652, stack(0x0000000023b90000,0x0000000023c90000)]
+  0x000000001a6d4000 JavaThread "Timer-6" [_thread_blocked, id=15732, stack(0x0000000023a90000,0x0000000023b90000)]
+  0x000000001a683000 JavaThread "Timer-5" [_thread_blocked, id=39576, stack(0x0000000023990000,0x0000000023a90000)]
+  0x0000000019889800 JavaThread "Timer-4" [_thread_blocked, id=34748, stack(0x0000000023890000,0x0000000023990000)]
+  0x0000000019986000 JavaThread "Timer-3" [_thread_blocked, id=30308, stack(0x0000000023790000,0x0000000023890000)]
+  0x000000001a4b8800 JavaThread "Timer-2" [_thread_blocked, id=18364, stack(0x0000000022400000,0x0000000022500000)]
+  0x000000001a4b7800 JavaThread "Timer-1" [_thread_blocked, id=22140, stack(0x0000000022300000,0x0000000022400000)]
+  0x000000001a479800 JavaThread "Timer-0" [_thread_blocked, id=60132, stack(0x0000000022200000,0x0000000022300000)]
+  0x000000001a410000 JavaThread "Thread-3" daemon [_thread_in_native, id=35408, stack(0x0000000022000000,0x0000000022100000)]
+  0x000000001a3cf000 JavaThread "JavaFX-Launcher" [_thread_blocked, id=39916, stack(0x0000000022100000,0x0000000022200000)]
+  0x000000001a359000 JavaThread "JavaFX Application Thread" [_thread_in_native, id=22320, stack(0x000000001b590000,0x000000001b690000)]
+  0x000000001a365000 JavaThread "Thread-1" daemon [_thread_blocked, id=30528, stack(0x000000001b490000,0x000000001b590000)]
+  0x000000001a313800 JavaThread "QuantumRenderer-0" daemon [_thread_in_native, id=18568, stack(0x000000001ab00000,0x000000001ac00000)]
+  0x00000000197c9000 JavaThread "Service Thread" daemon [_thread_blocked, id=46980, stack(0x000000001a100000,0x000000001a200000)]
+=>0x000000001973b000 JavaThread "C1 CompilerThread3" daemon [_thread_in_native, id=67588, stack(0x000000001a000000,0x000000001a100000)]
+  0x0000000019732000 JavaThread "C2 CompilerThread2" daemon [_thread_blocked, id=39336, stack(0x0000000019f00000,0x000000001a000000)]
+  0x000000001972c000 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=10212, stack(0x0000000019e00000,0x0000000019f00000)]
+  0x0000000019728000 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=54192, stack(0x0000000019d00000,0x0000000019e00000)]
+  0x0000000019726000 JavaThread "Attach Listener" daemon [_thread_blocked, id=65708, stack(0x0000000019c00000,0x0000000019d00000)]
+  0x000000001772e000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=73168, stack(0x0000000019b00000,0x0000000019c00000)]
+  0x0000000002829800 JavaThread "Finalizer" daemon [_thread_blocked, id=28000, stack(0x0000000019600000,0x0000000019700000)]
+  0x0000000002823000 JavaThread "Reference Handler" daemon [_thread_blocked, id=35540, stack(0x0000000019500000,0x0000000019600000)]
+  0x0000000002730800 JavaThread "main" [_thread_blocked, id=10864, stack(0x0000000002570000,0x0000000002670000)]
+
+Other Threads:
+  0x000000001771a000 VMThread [stack: 0x0000000019400000,0x0000000019500000] [id=54012]
+  0x00000000197ca000 WatcherThread [stack: 0x000000001a200000,0x000000001a300000] [id=5308]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 37888K, used 22299K [0x00000000d6300000, 0x00000000d8d00000, 0x0000000100000000)
+  eden space 32768K, 57% used [0x00000000d6300000,0x00000000d7578f30,0x00000000d8300000)
+  from space 5120K, 66% used [0x00000000d8300000,0x00000000d864dd40,0x00000000d8800000)
+  to   space 5120K, 0% used [0x00000000d8800000,0x00000000d8800000,0x00000000d8d00000)
+ ParOldGen       total 86016K, used 6416K [0x0000000082800000, 0x0000000087c00000, 0x00000000d6300000)
+  object space 86016K, 7% used [0x0000000082800000,0x0000000082e44010,0x0000000087c00000)
+ Metaspace       used 11106K, capacity 11570K, committed 11904K, reserved 1058816K
+  class space    used 1419K, capacity 1575K, committed 1664K, reserved 1048576K
+
+Card table byte_map: [0x0000000011bf0000,0x0000000011fe0000] byte_map_base: 0x00000000117dc000
+
+Marking Bits: (ParMarkBitMap*) 0x0000000053504040
+ Begin Bits: [0x0000000012a80000, 0x00000000149e0000)
+ End Bits:   [0x00000000149e0000, 0x0000000016940000)
+
+Polling page: 0x0000000000d60000
+
+CodeCache: size=245760Kb used=5376Kb max_used=5376Kb free=240383Kb
+ bounds [0x0000000002830000, 0x0000000002d80000, 0x0000000011830000]
+ total_blobs=2237 nmethods=1665 adapters=484
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 10.165 Thread 0x000000001973b000 nmethod 1661 0x0000000002d70550 code [0x0000000002d706e0, 0x0000000002d70b18]
+Event: 10.571 Thread 0x000000001973b000 1662   !   3       com.sun.scenario.animation.shared.TimelineClipCore::visitKeyFrame (74 bytes)
+Event: 10.571 Thread 0x000000001973b000 nmethod 1662 0x0000000002d70cd0 code [0x0000000002d70ee0, 0x0000000002d71848]
+Event: 10.734 Thread 0x000000001973b000 1663       3       java.nio.Buffer::flip (20 bytes)
+Event: 10.735 Thread 0x000000001973b000 nmethod 1663 0x0000000002d71dd0 code [0x0000000002d71f20, 0x0000000002d72090]
+Event: 10.735 Thread 0x000000001973b000 1664       3       java.io.BufferedWriter::ensureOpen (18 bytes)
+Event: 10.735 Thread 0x000000001973b000 nmethod 1664 0x0000000002d72110 code [0x0000000002d72280, 0x0000000002d724c8]
+Event: 10.735 Thread 0x000000001973b000 1665       1       sun.nio.cs.StreamEncoder::isOpen (5 bytes)
+Event: 10.735 Thread 0x000000001973b000 nmethod 1665 0x0000000002d72590 code [0x0000000002d726e0, 0x0000000002d727f0]
+Event: 10.735 Thread 0x000000001973b000 1666       3       sun.nio.cs.SingleByte$Encoder::encodeArrayLoop (236 bytes)
+
+GC Heap History (2 events):
+Event: 0.648 GC heap before
+{Heap before GC invocations=1 (full 0):
+ PSYoungGen      total 37888K, used 32298K [0x00000000d6300000, 0x00000000d8d00000, 0x0000000100000000)
+  eden space 32768K, 98% used [0x00000000d6300000,0x00000000d828aa88,0x00000000d8300000)
+  from space 5120K, 0% used [0x00000000d8800000,0x00000000d8800000,0x00000000d8d00000)
+  to   space 5120K, 0% used [0x00000000d8300000,0x00000000d8300000,0x00000000d8800000)
+ ParOldGen       total 86016K, used 0K [0x0000000082800000, 0x0000000087c00000, 0x00000000d6300000)
+  object space 86016K, 0% used [0x0000000082800000,0x0000000082800000,0x0000000087c00000)
+ Metaspace       used 8939K, capacity 9336K, committed 9600K, reserved 1056768K
+  class space    used 1219K, capacity 1300K, committed 1408K, reserved 1048576K
+Event: 0.653 GC heap after
+Heap after GC invocations=1 (full 0):
+ PSYoungGen      total 37888K, used 3383K [0x00000000d6300000, 0x00000000d8d00000, 0x0000000100000000)
+  eden space 32768K, 0% used [0x00000000d6300000,0x00000000d6300000,0x00000000d8300000)
+  from space 5120K, 66% used [0x00000000d8300000,0x00000000d864dd40,0x00000000d8800000)
+  to   space 5120K, 0% used [0x00000000d8800000,0x00000000d8800000,0x00000000d8d00000)
+ ParOldGen       total 86016K, used 6416K [0x0000000082800000, 0x0000000087c00000, 0x00000000d6300000)
+  object space 86016K, 7% used [0x0000000082800000,0x0000000082e44010,0x0000000087c00000)
+ Metaspace       used 8939K, capacity 9336K, committed 9600K, reserved 1056768K
+  class space    used 1219K, capacity 1300K, committed 1408K, reserved 1048576K
+}
+
+Deoptimization events (6 events):
+Event: 0.495 Thread 0x000000001a359000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00000000029e6904 method=java.lang.String.replace(CC)Ljava/lang/String; @ 26
+Event: 0.537 Thread 0x000000001a359000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x0000000002a13f68 method=java.lang.String.indexOf([CII[CIII)I @ 134
+Event: 0.593 Thread 0x000000001a359000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x0000000002a93b5c method=sun.misc.MetaIndex.mayContain(Ljava/lang/String;)Z @ 13
+Event: 0.602 Thread 0x000000001a359000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x0000000002aa3ddc method=com.sun.javafx.iio.gif.GIFImageLoader2$LZWDecoder.readString()I @ 20
+Event: 0.644 Thread 0x000000001a4b7800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x0000000002ab2f58 method=com.sun.javafx.image.impl.ByteBgra$ToByteBgraPreConv.doConvert([BII[BIIII)V @ 80
+Event: 0.818 Thread 0x000000001a313800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x0000000002b0b008 method=sun.net.www.ParseUtil.encodePath(Ljava/lang/String;Z)Ljava/lang/String; @ 109
+
+Internal exceptions (10 events):
+Event: 0.120 Thread 0x0000000002730800 Exception <a 'java/lang/NoSuchFieldError': method resolution failed> (0x00000000d65f0358) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u51\3951\hotspot\src\share\vm\prims\methodHandles.cpp, line 1125]
+Event: 0.137 Thread 0x0000000002730800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000d6679700) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u51\3951\hotspot\src\share\vm\prims\jvm.cpp, line 1382]
+Event: 0.137 Thread 0x0000000002730800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000d66798b8) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u51\3951\hotspot\src\share\vm\prims\jvm.cpp, line 1382]
+Event: 0.138 Thread 0x0000000002730800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000d667d3b0) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u51\3951\hotspot\src\share\vm\prims\jvm.cpp, line 1382]
+Event: 0.138 Thread 0x0000000002730800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000d667d568) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u51\3951\hotspot\src\share\vm\prims\jvm.cpp, line 1382]
+Event: 0.138 Thread 0x0000000002730800 Exception <a 'java/lang/NullPointerException'> (0x00000000d667dae8) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u51\3951\hotspot\src\share\vm\interpreter\linkResolver.cpp, line 1178]
+Event: 0.511 Thread 0x000000001a359000 Exception <a 'java/lang/NullPointerException'> (0x00000000d6e921a0) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u51\3951\hotspot\src\share\vm\interpreter\linkResolver.cpp, line 1178]
+Event: 0.511 Thread 0x000000001a359000 Exception <a 'java/lang/NullPointerException'> (0x00000000d6e921a0) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u51\3951\hotspot\src\share\vm\prims\jvm.cpp, line 1386]
+Event: 10.731 Thread 0x000000001a359000 Exception <a 'java/lang/OutOfMemoryError': unable to create new native thread> (0x00000000d756f1c0) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u51\3951\hotspot\src\share\vm\prims\jvm.cpp, line 3016]
+Event: 10.731 Thread 0x000000001a359000 Exception <a 'java/lang/OutOfMemoryError'> (0x00000000d756f1c0) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u51\3951\hotspot\src\share\vm\prims\jvm.cpp, line 1386]
+
+Events (10 events):
+Event: 10.683 Thread 0x0000000019998800 Thread added: 0x0000000019998800
+Event: 10.699 Thread 0x0000000019995000 Thread added: 0x0000000019995000
+Event: 10.709 Thread 0x0000000019996800 Thread added: 0x0000000019996800
+Event: 10.714 Thread 0x0000000019995800 Thread added: 0x0000000019995800
+Event: 10.731 loading class java/lang/Throwable$WrappedPrintStream
+Event: 10.732 loading class java/lang/Throwable$PrintStreamOrWriter
+Event: 10.732 loading class java/lang/Throwable$PrintStreamOrWriter done
+Event: 10.732 loading class java/lang/Throwable$WrappedPrintStream done
+Event: 10.732 loading class java/util/IdentityHashMap$KeySet
+Event: 10.734 loading class java/util/IdentityHashMap$KeySet done
+
+
+Dynamic libraries:
+0x00007ff70f2c0000 - 0x00007ff70f2f7000 	C:\Program Files\Java\jre1.8.0_51\bin\javaw.exe
+0x00007ffc80490000 - 0x00007ffc806a7000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffc7f6c0000 - 0x00007ffc7f784000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffc7dbd0000 - 0x00007ffc7df75000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffc7ead0000 - 0x00007ffc7eb81000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffc7eba0000 - 0x00007ffc7ec47000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffc7e4a0000 - 0x00007ffc7e546000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffc7ec50000 - 0x00007ffc7ed67000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffc7f870000 - 0x00007ffc7fa1e000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffc7d800000 - 0x00007ffc7d826000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffc7eaa0000 - 0x00007ffc7eac9000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffc7da40000 - 0x00007ffc7db59000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffc7d9a0000 - 0x00007ffc7da3a000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffc7e040000 - 0x00007ffc7e151000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffc6a6e0000 - 0x00007ffc6a973000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.2506_none_270c5ae97388e100\COMCTL32.dll
+0x00007ffc7f5d0000 - 0x00007ffc7f601000 	C:\WINDOWS\System32\IMM32.DLL
+0x00000000529c0000 - 0x0000000052a92000 	C:\Program Files\Java\jre1.8.0_51\bin\msvcr100.dll
+0x0000000052d00000 - 0x0000000053583000 	C:\Program Files\Java\jre1.8.0_51\bin\server\jvm.dll
+0x00007ffc80280000 - 0x00007ffc80288000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffc74ef0000 - 0x00007ffc74f24000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffc6b010000 - 0x00007ffc6b019000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffc6ef50000 - 0x00007ffc6ef5a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffc80180000 - 0x00007ffc801f1000 	C:\WINDOWS\System32\WS2_32.dll
+0x0000000052c10000 - 0x0000000052c1f000 	C:\Program Files\Java\jre1.8.0_51\bin\verify.dll
+0x0000000052be0000 - 0x0000000052c09000 	C:\Program Files\Java\jre1.8.0_51\bin\java.dll
+0x0000000052bc0000 - 0x0000000052bd6000 	C:\Program Files\Java\jre1.8.0_51\bin\zip.dll
+0x00007ffc7ed70000 - 0x00007ffc7f5c9000 	C:\WINDOWS\System32\SHELL32.dll
+0x00007ffc7b730000 - 0x00007ffc7c024000 	C:\WINDOWS\SYSTEM32\windows.storage.dll
+0x00007ffc7e700000 - 0x00007ffc7ea89000 	C:\WINDOWS\System32\combase.dll
+0x00007ffc7b5f0000 - 0x00007ffc7b72e000 	C:\WINDOWS\SYSTEM32\wintypes.dll
+0x00007ffc7e3a0000 - 0x00007ffc7e493000 	C:\WINDOWS\System32\SHCORE.dll
+0x00007ffc80200000 - 0x00007ffc8025e000 	C:\WINDOWS\System32\shlwapi.dll
+0x00007ffc7d730000 - 0x00007ffc7d756000 	C:\WINDOWS\SYSTEM32\profapi.dll
+0x0000000052990000 - 0x00000000529bc000 	C:\Program Files\Java\jre1.8.0_51\bin\prism_d3d.dll
+0x00007ffc12990000 - 0x00007ffc12b39000 	C:\WINDOWS\system32\d3d9.dll
+0x00007ffc7ab10000 - 0x00007ffc7ab3b000 	C:\WINDOWS\SYSTEM32\dwmapi.dll
+0x00007ffc7ab80000 - 0x00007ffc7abb6000 	C:\WINDOWS\SYSTEM32\dxcore.dll
+0x00007ffc7a890000 - 0x00007ffc7a93b000 	C:\WINDOWS\system32\uxtheme.dll
+0x00007ffc786a0000 - 0x00007ffc786ea000 	C:\WINDOWS\SYSTEM32\directxdatabasehelper.dll
+0x00007ffc7c890000 - 0x00007ffc7c8a8000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffc7d4a0000 - 0x00007ffc7d4b2000 	C:\WINDOWS\SYSTEM32\msasn1.dll
+0x00007ffc6ef10000 - 0x00007ffc6ef42000 	C:\WINDOWS\SYSTEM32\cryptnet.dll
+0x00007ffc7d830000 - 0x00007ffc7d996000 	C:\WINDOWS\System32\CRYPT32.dll
+0x00007ffc7cfe0000 - 0x00007ffc7cfec000 	C:\WINDOWS\SYSTEM32\cryptbase.dll
+0x00007ffc7db60000 - 0x00007ffc7dbcc000 	C:\WINDOWS\System32\wintrust.dll
+0x00007ffc80260000 - 0x00007ffc8027f000 	C:\WINDOWS\System32\imagehlp.dll
+0x00007ffc7cfc0000 - 0x00007ffc7cfdb000 	C:\WINDOWS\SYSTEM32\CRYPTSP.dll
+0x00007ffc7c850000 - 0x00007ffc7c885000 	C:\WINDOWS\system32\rsaenh.dll
+0x00007ffc7e160000 - 0x00007ffc7e1da000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffc7d190000 - 0x00007ffc7d1b8000 	C:\WINDOWS\SYSTEM32\bcrypt.dll
+0x0000000052940000 - 0x0000000052981000 	C:\Program Files\Java\jre1.8.0_51\bin\glass.dll
+0x00007ffc7e550000 - 0x00007ffc7e649000 	C:\WINDOWS\System32\COMDLG32.dll
+0x00007ffc7ffe0000 - 0x00007ffc80180000 	C:\WINDOWS\System32\ole32.dll
+0x00007ffc7f790000 - 0x00007ffc7f867000 	C:\WINDOWS\System32\OLEAUT32.dll
+0x00007ffc7e250000 - 0x00007ffc7e39f000 	C:\WINDOWS\System32\MSCTF.dll
+0x00007ffc4a200000 - 0x00007ffc4a2bc000 	C:\WINDOWS\System32\DriverStore\FileRepository\nvami.inf_amd64_357c899e52491771\nvldumdx.dll
+0x00007ffc6ec60000 - 0x00007ffc6edb8000 	C:\WINDOWS\SYSTEM32\drvstore.dll
+0x00007ffc7d4c0000 - 0x00007ffc7d4ec000 	C:\WINDOWS\SYSTEM32\devobj.dll
+0x00007ffc7d4f0000 - 0x00007ffc7d53e000 	C:\WINDOWS\SYSTEM32\cfgmgr32.dll
+0x00007ffc7d070000 - 0x00007ffc7d0bb000 	C:\WINDOWS\SYSTEM32\wldp.dll
+0x00007ffbd93c0000 - 0x00007ffbdc54d000 	C:\WINDOWS\System32\DriverStore\FileRepository\nvami.inf_amd64_357c899e52491771\nvd3dumx.dll
+0x00007ffc0b340000 - 0x00007ffc0b611000 	C:\WINDOWS\system32\nvspcap64.dll
+0x00007ffc7c910000 - 0x00007ffc7c944000 	C:\WINDOWS\SYSTEM32\ntmarta.dll
+0x00007ffc7ce00000 - 0x00007ffc7ce26000 	C:\WINDOWS\SYSTEM32\gpapi.dll
+0x00007ffc3cb60000 - 0x00007ffc3ccc5000 	C:\WINDOWS\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_034e16382545a6a5\igdumdim64.dll
+0x00007ffbac8b0000 - 0x00007ffbb04d1000 	C:\WINDOWS\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_034e16382545a6a5\igd9dxva64.dll
+0x00007ffc7fad0000 - 0x00007ffc7ff44000 	C:\WINDOWS\System32\SETUPAPI.dll
+0x00007ffc72480000 - 0x00007ffc7284d000 	C:\WINDOWS\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_034e16382545a6a5\igdgmm64.dll
+0x00007ffc759b0000 - 0x00007ffc759d7000 	C:\WINDOWS\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_034e16382545a6a5\igdinfo64.dll
+0x00007ffc6f5f0000 - 0x00007ffc72337000 	C:\WINDOWS\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_034e16382545a6a5\igc64.dll
+0x0000000052920000 - 0x0000000052935000 	C:\Program Files\Java\jre1.8.0_51\bin\javafx_font.dll
+0x00007ffc79260000 - 0x00007ffc794d3000 	C:\WINDOWS\SYSTEM32\dwrite.dll
+0x00007ffc7f610000 - 0x00007ffc7f6c0000 	C:\WINDOWS\System32\clbcatq.dll
+0x00007ffc790b0000 - 0x00007ffc79260000 	C:\WINDOWS\SYSTEM32\WindowsCodecs.dll
+0x00007ffc64780000 - 0x00007ffc647de000 	C:\WINDOWS\system32\dataexchange.dll
+0x00007ffc75270000 - 0x00007ffc754f5000 	C:\WINDOWS\system32\twinapi.appcore.dll
+0x00007ffc69790000 - 0x00007ffc697c2000 	C:\Program Files\Common Files\Microsoft Shared\Ink\rtscom.dll
+0x00007ffc75120000 - 0x00007ffc7526a000 	C:\WINDOWS\SYSTEM32\textinputframework.dll
+0x00007ffc7a3a0000 - 0x00007ffc7a4d3000 	C:\WINDOWS\SYSTEM32\CoreMessaging.dll
+0x00007ffc77fb0000 - 0x00007ffc7831c000 	C:\WINDOWS\SYSTEM32\CoreUIComponents.dll
+0x00007ffc5c580000 - 0x00007ffc5c9c5000 	C:\WINDOWS\SYSTEM32\UIAutomationCore.DLL
+0x00007ffc6b530000 - 0x00007ffc6b57b000 	C:\WINDOWS\system32\ApplicationTargetedFeatureDatabase.dll
+0x00007ffc6a4e0000 - 0x00007ffc6a58b000 	C:\Windows\System32\OneCoreCommonProxyStub.dll
+
+VM Arguments:
+jvm_args: -Dfile.encoding=Cp1252 
+java_command: miniprojtemplate.Main
+java_class_path (initial): C:\Users\Janry\workspace\Copy of project\bin;C:\eclipse\plugins\org.eclipse.fx.ide.css.jfx8_2.4.0.201605112122.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:/Program Files/Java/jre1.8.0_51/bin/server;C:/Program Files/Java/jre1.8.0_51/bin;C:/Program Files/Java/jre1.8.0_51/lib/amd64;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\dotnet\;C:\msys64\mingw64\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Users\Janry\AppData\Local\Microsoft\WindowsApps;C:\Users\Janry\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Janry\AppData\Local\GitHubDesktop\bin;C:\Users\Janry\AppData\Roaming\npm;C:\eclipse;
+USERNAME=Janry
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 165 Stepping 2, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 22621 (10.0.22621.2506)
+
+CPU:total 8 (4 cores per cpu, 2 threads per core) family 6 model 165 stepping 2, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx
+
+Memory: 4k page, physical 8221704k(664960k free), swap 33387528k(2828k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.51-b03) for windows-amd64 JRE (1.8.0_51-b16), built on Jun  8 2015 18:03:07 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Mon Dec 04 03:14:38 2023
+elapsed time: 10 seconds (0d 0h 0m 10s)
+
